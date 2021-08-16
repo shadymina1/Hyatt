@@ -1,0 +1,24 @@
+﻿@page
+@model final_hotel.Pages.LoginModel
+@{
+}
+<link rel="stylesheet" href="~/css/pages.css" />
+<div class="text-center full_bg hyatt_p_cont ">
+    <h1 class="display-4 hyatt_p">HYATT</h1>
+    <p class="booking">
+        <a class="booking-link" asp-for="/Bookingdate">New booking</a> | <a class="booking-link" href="/Login">
+            Your
+            booking
+        </a>
+    </p>
+</div>
+
+<form class="bookdate" action="/Profile" method="get">
+
+    <input type="email" placeholder="Email" class="input">
+    <br>
+    <input type="password" placeholder="Password" class="input">
+    <br>
+    <input type="submit" value="Submit" name="" class="submit btn btn-success ">
+
+</form>

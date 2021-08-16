@@ -1,0 +1,39 @@
+﻿@page
+@model final_hotel.Pages.ProfileModel
+@{
+}
+
+<link rel="stylesheet" href="~/css/pages.css" />
+<div class="text-center full_bg hyatt_p_cont ">
+    <h1 class="display-4 hyatt_p">HYATT</h1>
+    <p class="booking">
+        <a class="booking-link" asp-for="/Bookingdate">New booking</a> | <a class="booking-link" href="/Profile">
+            Your
+            booking
+        </a>
+    </p>
+</div>
+
+<h1>Your current booking:</h1>
+
+<div class="room-title" id="dlx-swch">
+    <h4> Dulux Room</h4>
+</div>
+<div class="room" id="dlx-dtls">
+    <div class="container">
+        <div class="row">
+            <div style="padding:10px" class="col-md">
+                <img width="100%" src="./img/suite.jpg" alt="">
+            </div>
+            <form action="/Index" method="GET" class="col-md">
+                <h5>Reservation name:  Shady Mina </h5>
+                <h5>Reservation email: shady.mina.ca@gmail.com </h5>
+                <h5>Price per night :1000 CAd </h5>
+                <h6> Total nights : 4 </h6>
+                <h6> Total cost : 4000 CAD</h6>
+                <p>Each spacious guest room comes equipped with a flat-screen HDTV, coffee maker, hairdryer, seating area and work desk. Select rooms offer an in-room hot tub and views of the Falls.</p>
+                <input type="submit" value="Done" name="" class="submit btn btn-success ">
+            </form>
+        </div>
+    </div>
+</div>

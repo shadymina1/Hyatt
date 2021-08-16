@@ -1,0 +1,29 @@
+﻿@page
+@model final_hotel.Pages.BookingDateModel
+@{
+}
+<link rel="stylesheet" href="~/css/pages.css" />
+<div class="text-center full_bg hyatt_p_cont ">
+    <h1 class="display-4 hyatt_p">HYATT</h1>
+    <p class="booking">
+        <a class="booking-link" asp-for="/Bookingdate">New booking</a> | <a class="booking-link" href="/Login">Your
+            booking</a></p>
+</div>
+
+<div class="booking-cont">
+
+    <form  action="" class="bookdate" method="post">
+        
+            <h4>Check-in</h4>
+
+            <input class="input" type="date" asp-for="booking.chkin">
+
+            <h4>Check-out</h4>
+
+            <input class="input" type="date" asp-for="booking.chkout">
+            <br>
+            <input class="submit" type="Submit" value="Next">
+        
+    </form>
+
+</div>

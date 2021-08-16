@@ -1,0 +1,91 @@
+﻿@page
+@model final_hotel.Pages.BookingRoomModel
+@{
+}
+
+<link rel="stylesheet" href="~/css/pages.css" />
+
+
+<div class="text-center full_bg hyatt_p_cont ">
+    <h1 class="display-4 hyatt_p">HYATT</h1>
+    <p class="booking">
+        <a class="booking-link" href="/BookingDate">New booking</a> | <a class="booking-link" href="/Login">Your booking</a></p>
+</div>
+<h1> Options for @Model.duration nights:</h1>
+
+<div>
+    <div class="room-title" id="dbl-swch" > 
+        <h4> Double Room</h4>
+    </div>
+    <div class="room" id="dbl-dtls" >
+       
+        <div class="container">
+            <div class="row">
+                <div style="padding:10px" class="col-md">
+                    <img width="100%" src="./img/souble.jpg" alt="">
+                </div>
+                <form action="/BookingDone" method="GET" class="col-md">  
+                    <input hidden asp-for="rooms.tier"  value="Double">
+                    <input hidden asp-for="rooms.perNight"  value="120 CAD">
+                    <input hidden asp-for="rooms.nights"  value="@Model.duration">
+                    <input hidden asp-for="rooms.total"  value="@Model.totalNightsB CAD">
+                    <h5 >Price per night : 120 CAD </h5>
+                    <h6> Total nights : @Model.duration </h6>
+                    <h6> Total cost : @Model.totalNightsC CAD</h6>
+                    <p>Less than 5 minutes' walk from Casino Nova Scotia, this nonsmoking hotel is located in downtown Halifax. Free WiFi is available throughout,</p>
+                    <input type="submit" value="Next" name="" class="submit btn btn-success ">
+                </form>
+            </div>
+        </div>
+    </div> 
+    <div  class="room-title" id="dlx-swch" >
+        <h4> Dulux Room</h4>
+    </div>
+    <div class="room"  id="dlx-dtls" >
+        <div class="container">
+            <div class="row">
+                <div style="padding:10px" class="col-md">
+                    <img width="100%" src="./img/dulux.jpg" alt="">
+                </div>
+                <form action="/BookingDone" method="GET" class="col-md">  
+                    <input hidden asp-for="rooms.tier"  value="Dulux">
+                    <input hidden asp-for="rooms.perNight"  value="200 CAD">
+                    <input hidden asp-for="rooms.nights"  value="@Model.duration">
+                    <input hidden asp-for="rooms.total"  value="@Model.totalNightsB CAD">
+                    <h5 >Price per night : 200 CAD </h5>
+                    <h6> Total nights : @Model.duration </h6>
+                    <h6> Total cost : @Model.totalNightsB CAD</h6>
+                    <p>Each spacious guest room comes equipped with a flat-screen HDTV, coffee maker, hairdryer, seating area and work desk. Select rooms offer an in-room hot tub and views of the Falls.</p>
+                    <input type="submit" value="Next" name="" class="submit btn btn-success ">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div  class="room-title" id="suite-swch" >
+        <h4> Suite  </h4>
+    </div>
+    <div class="room" id="suite-dtls" >
+       
+        <div class="container">
+            <div class="row">
+                <div style="padding:10px" class="col-md">
+                    <img width="100%" src="./img/suite.jpg" alt="">
+                </div>
+                <form action="/BookingDone" method="GET" class="col-md">  
+                    <input hidden asp-for="rooms.tier"  value="Suite">
+                    <input hidden asp-for="rooms.perNight"  value="1000 CAD">
+                    <input hidden asp-for="rooms.nights"  value="@Model.duration">
+                    <input hidden asp-for="rooms.total"  value="@Model.totalNightsB CAD">
+
+                    <h5 >Price per night : 1000 CAD </h5>
+                    <h6> Total nights : @Model.duration </h6>
+                    <h6> Total cost : @Model.totalNightsA CAD</h6>
+                    <p>Connected to the Fallsview Casino's Entertainment Center by a heated and air conditioned indoor glass walkway, this hotel features an indoor pool and 3 on-site restaurants. Many area attractions, including Journey Behind the Falls, can be found within 15 minutes’ walk.</p>
+                    <input type="submit" value="Next" name="" class="submit btn btn-success ">
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

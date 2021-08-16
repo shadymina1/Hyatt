@@ -1,0 +1,32 @@
+﻿@page
+@model final_hotel.Pages.BookingDoneModel
+@{
+}
+<link rel="stylesheet" href="~/css/pages.css" />
+<div class="text-center full_bg hyatt_p_cont ">
+    <h1 class="display-4 hyatt_p">HYATT</h1>
+    <p class="booking">
+        <a class="booking-link" asp-for="/Bookingdate">New booking</a> | <a class="booking-link" href="/Login">Your booking
+        </a>
+    </p>
+</div>
+<h1>@Model.tier</h1>
+<form class="bookdate" action="" method="post">
+
+    <input type="text" placeholder="First Name" asp-for="client.firstName" class="input">
+    <br>
+    <input type="text" placeholder="Last Name" asp-for="client.lastName" class="input">
+    <br>
+    <input type="email" placeholder="Email" asp-for="client.email" class="input">
+    <br>
+    <input type="password" placeholder="Password" asp-for="client.password" class="input">
+    <br>
+    <input type="text"placeholder="@Model.tier"  asp-for="rooms.tier" value="@Model.tier" hidden class="input">
+    <br>
+    <input type="text" disabled asp-for="rooms.price" value="@Model.perNight" hidden class="input">
+    <br>
+    <input type="text" disabled asp-for="rooms.total" value="@Model.total" hidden  class="input">
+    <br>
+    <input type="submit" value="Submit" name="" class="submit btn btn-success ">
+
+</form>
